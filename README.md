@@ -21,6 +21,7 @@ Testing the server and client
 
 ## PROGRAM:
 ### Server code:
+```
 import socket
 
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
@@ -37,8 +38,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             if not data:
                 break
             conn.sendall(data)
-
+```
 ### Client code:
+```
 import socket
 
 HOST = "127.0.0.1"  # The server's hostname or IP address
@@ -50,7 +52,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     data = s.recv(1024)
 
 print(f"Received {data!r}")
-
+```
 ## OUTPUT:
 ### python3 echo-server.py
 ![server](https://github.com/user-attachments/assets/da080cea-9436-4ac4-89b7-00e8e9faa2c5)
